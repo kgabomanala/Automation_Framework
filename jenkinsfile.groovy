@@ -1,29 +1,25 @@
 pipeline{
 agent any
- tools {
-    maven 'maven-3.9.2'
-  }
 stages
 {
 stage('Build')
 {
 steps{
 echo "Building the Code.........."
- sh "mvn clean"
+ sh script :'mvn compile'
 }
 }
-stage('Test')
+stage('run Test')
 {
 steps{
 echo "Testing the Code.........."
-sh "mvn test"
+ sh script:'mvn test -Dbrowser=localchrome'
 }
 }
 stage('Compile')
 {
 steps{
 echo "Compiling the Project.........."
-sh"mvn compile"
 }
 }
 stage('Deploy')
