@@ -1,6 +1,10 @@
 pipeline{
 agent any
-stages
+ tools {
+  maven 'Maven Apache'
+ }
+
+ stages
 {
 stage('Build')
 {
