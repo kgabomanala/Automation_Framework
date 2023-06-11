@@ -9,5 +9,8 @@
         <module name="Build_Framework" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="maven-compiler-plugin" target="19" />
+    </bytecodeTargetLevel>
   </component>
 </project>
