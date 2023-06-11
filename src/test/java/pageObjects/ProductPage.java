@@ -12,7 +12,7 @@ public class ProductPage {
    By productPage= By.xpath("//span[contains(text(),'Products')]");
     By addBackpack = By.id("add-to-cart-sauce-labs-backpack");
     By shoppingCart = By.className("shopping_cart_link");
-    By cartPage= By.xpath("//span[contains(text(),'Your Cart')]");
+    By cartPage= By.xpath("//span[contains(text(),'Your Cartkk')]");
     public WebDriver driver;
 
     public ProductPage(WebDriver driver){
