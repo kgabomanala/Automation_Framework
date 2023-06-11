@@ -6,7 +6,7 @@ import org.testng.annotations.DataProvider;
 
 
 @CucumberOptions(
-        plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
+       // plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         features = {"src/test/Features/login.feature","src/test/Features/products.feature"},
         glue = {"stepdefinitions"},
         monochrome=true

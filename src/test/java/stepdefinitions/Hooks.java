@@ -22,6 +22,7 @@ public class Hooks {
     public void TearDown(){
         testContextSetup.testBase.driver.quit();
     }
+    /*
     @AfterStep
     public  void  addScreenshot(Scenario scenario) throws IOException {
 
@@ -31,4 +32,6 @@ public class Hooks {
            scenario.attach(filecontent,"image/png","image");
         }
     }
+
+     */
 }
