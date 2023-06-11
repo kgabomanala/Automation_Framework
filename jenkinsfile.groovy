@@ -10,7 +10,7 @@ stage('Build')
 {
 steps{
 echo "Building the Code.........."
- sh script :'mvn compile'
+ sh script :'mvn build'
 }
 }
 stage('run Test')
