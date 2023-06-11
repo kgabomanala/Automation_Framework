@@ -10,7 +10,7 @@ stage('Build')
 {
 steps{
 echo "Building the Code.........."
- sh script :'mvn build'
+ sh script :'mvn compile'
 }
 }
 stage('run Test')
@@ -24,7 +24,7 @@ stage('Compile')
 {
 steps{
 echo "Compiling the Project.........."
-
+ publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: '', reportFiles: 'test-output/SparkReport/Spark*.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
 }
 }
 stage('Deploy')
