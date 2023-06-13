@@ -31,14 +31,8 @@ stage('Deploy')
 {
 steps{
 echo "Deploying the Project.........."
+ emailext attachLog: true, body: 'we test ', subject: 'kgabo', to: 'tshepomana197@gmail.com'
 }
- post{
-  always{
-   emailext to: "tshepomana197@gmail.com",
-           subject: "Test Email",
-           body: "Test"
-  }
- }
 }
 }
 }
