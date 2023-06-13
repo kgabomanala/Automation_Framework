@@ -31,8 +31,14 @@ stage('Deploy')
 {
 steps{
 echo "Deploying the Project.........."
- emailext attachmentsPattern: 'test-output/SparkReport/Spark.html', body: 'hi please find the report', subject: 'html', to: 'tshepomana197@gmail.com'
 }
+ post{
+  always{
+   emailext to: "tshepomana197@gmail.com",
+           subject: "Test Email",
+           body: "Test"
+  }
+ }
 }
 }
 }
